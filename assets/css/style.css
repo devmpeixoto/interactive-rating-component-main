@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Overpass', sans-serif;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Second-Color: hsl(213deg, 20%, 22%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  background-color: var(--Very-Dark-Blue);
+}
+
+.hide {
+  display: none;
+}
+
+.card {
+  background-color: var(--Dark-Blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 2rem;
+  width: 400px;
+}
+
+.desktop-style {
+  padding: 2rem
+}
+
+.star-icon {
+  background-color: var(--Second-Color);
+  padding: .8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.question,
+.thank-you {
+  color: var(--White);
+  margin-bottom: 1rem;
+}
+
+.feedback {
+  color: var(--Medium-Grey);
+  font-size: .9rem;
+}
+
+.card-numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.card-number {
+  background-color: var(--Second-Color);
+  color: var(--Medium-Grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.card-number:hover {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+.checked {
+  background-color: var(--Orange) !important;
+  color: var(--White) !important;
+}
+
+button {
+  border: none;
+  background-color: var(--Orange);
+  color: var(--White);
+
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  width: 100%;
+  padding: .8rem;
+  border-radius: 2rem;
+
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.mobile-style {
+  padding: 2rem;
+  text-align: center;
+}
+
+.rating {
+  background-color: var(--Second-Color);
+  color: var(--Orange);
+
+  font-size: .9rem;
+
+  border-radius: 3rem;
+  padding: 5px 15px;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+.message {
+  color: var(--Medium-Grey);
+  font-size: .9rem;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  .card-number {
+    background-color: var(--Second-Color);
+    color: var(--Medium-Grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+}
